@@ -19,6 +19,7 @@ Book.find({ $and: [{pages: { $gt: 200 } }, { pages: { $lt: 500 } }]}).exec(funct
 Book.find({rating:{"$lt":5}}).sort({author:1}).exec( function(err, books) {
     //console.log(books)
 });
+
 Book.find({genres:"Fiction"}).skip(2).limit(3).exec(function(err, books){
     //console.log(books)
 });
